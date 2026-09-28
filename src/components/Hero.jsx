@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Icon from './Icon'
 import HeroVisual from './HeroVisual'
 
@@ -23,9 +24,9 @@ export default function Hero() {
           </p>
 
           <div className="hero-actions">
-            <a href="#ecosystems" className="btn btn-primary btn-lg">
+            <Link to="/login" className="btn btn-primary btn-lg">
               Get Started <Icon name="arrow" size={18} />
-            </a>
+            </Link>
             <a href="#how-it-works" className="btn btn-ghost btn-lg">
               Explore Platform
             </a>

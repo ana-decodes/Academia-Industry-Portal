@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import Logo from './Logo'
 import Icon from './Icon'
 
@@ -13,12 +14,6 @@ export default function Header() {
   const [open, setOpen] = useState(false)
 
   const closeMenu = () => setOpen(false)
-
-  // Temporary: later you will replace this with real navigation to a Login page
-  const handleLogin = () => {
-    closeMenu()
-    alert('Login page coming soon! This is only the landing page for now.')
-  }
 
   return (
     <header className="header">
@@ -42,12 +37,12 @@ export default function Header() {
           </nav>
 
           <div className="header-actions">
-            <button className="btn btn-ghost" onClick={handleLogin}>
+            <Link to="/login" className="btn btn-ghost" onClick={closeMenu}>
               Login
-            </button>
-            <a href="#ecosystems" className="btn btn-primary" onClick={closeMenu}>
+            </Link>
+            <Link to="/login" className="btn btn-primary" onClick={closeMenu}>
               Get Started
-            </a>
+            </Link>
           </div>
         </div>
 
